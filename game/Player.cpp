@@ -71,9 +71,9 @@ void Player::updateMovement()
 
 void Player::updateAnimation()
 {
-	if (this->moving == false) // Idle Animation
+	if (this->animationTimer.getElapsedTime().asSeconds() >= 0.2f)
 	{
-		if (this->animationTimer.getElapsedTime().asSeconds() >= 0.2f)
+		if (this->moving == false) // Idle Animation
 		{
 			this->currentFrame.left += 40.0f;
 			if (this->currentFrame.left >= 880.0f)
