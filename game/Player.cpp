@@ -17,7 +17,7 @@ void Player::initTexture()
 void Player::initSprite()
 {
 	this->sprite.setTexture(this->textureSheet);
-	this->currentFrame = sf::IntRect(0, 3, 220, 200);
+	this->currentFrame = sf::IntRect(0, 0, 220, 200);
 
 	this->sprite.setTextureRect(currentFrame);
 	this->sprite.setScale(0.75f, 0.75f);
