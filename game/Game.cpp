@@ -86,6 +86,6 @@ void Game::render()
 
 const sf::RenderWindow& Game::getWindow() const
 {
-	// TODO: insert return statement here
+	
 	return this->window;
 }

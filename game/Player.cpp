@@ -20,7 +20,7 @@ void Player::initSprite()
 	this->currentFrame = sf::IntRect(0, 0, 480, 480);
 
 	this->sprite.setTextureRect(currentFrame);
-	this->sprite.setScale(0.55f, 0.55f);
+	this->sprite.setScale(0.55f, 0.55f);    //  player size  //
 }
 
 void Player::inintAnimation()
@@ -30,7 +30,7 @@ void Player::inintAnimation()
 }
 
 void Player::initPhysics()
-{
+{									// setting //
 	this->velocityMax = 2.f;
 	this->velocityMin = 1.f;
 	this->acceleration = 2.f;
@@ -174,7 +174,7 @@ void Player::updateAnimation()
 	this->sprite.setTextureRect(this->currentFrame);
 	
 		}
-	this->sprite.setScale(0.55f, 0.55f);
+	this->sprite.setScale(-0.55f, 0.55f);
 	this->sprite.setOrigin(0.f, 0.f);
 	}
 	else if (this->animState == MOVING_LEFT)
@@ -188,9 +188,9 @@ void Player::updateAnimation()
 
 			this->animationTimer.restart();
 			this->sprite.setTextureRect(this->currentFrame);
-			this->sprite.setScale(-0.55f, 0.55f);
+			
 		}
-		this->sprite.setScale(-0.55f, 0.55f);
+		this->sprite.setScale(0.55f, 0.55f);
 		this->sprite.setOrigin(this->sprite.getGlobalBounds().width / 0.55f, 0.f);
 	}
 	else 
