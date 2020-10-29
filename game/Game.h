@@ -20,6 +20,7 @@ public:
 
 	//fucntion
 	void updatePlayer();
+	void updateCollsion();
 	void update();
 	void renderPlayer();
 	void render();
